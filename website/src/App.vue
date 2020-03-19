@@ -1,19 +1,28 @@
 <template>
   <div id="app">
+    <header />
     <h3>Jonathan Simmons</h3>
     <router-view />
+    <footer />
   </div>
 </template>
 
 <script>
+import Header from './components/Header';
+import Footer from './components/Footer';
+
 export default {
-  name: "App"
+  name: 'App',
+  components: {
+    header: Header,
+    footer: Footer,
+  },
 };
 </script>
 
 <style>
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
