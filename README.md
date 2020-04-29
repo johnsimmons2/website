@@ -1,20 +1,24 @@
-# Vue.js Portfolio Website
+# jsimmons
 
+## Project setup
+```
+npm install
+```
 
-## Development Notes
-header
-footer
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-Design:
-	- Mostly Single page
-  - Links to Github / Linkedin
-  - Parallax background that changes (blurred)
-  - Tiles and shapes come from offscreen into place while scrolling
-  - Dark mode / Light mode button
+### Compiles and minifies for production
+```
+npm run build
+```
 
-Pages:
-  - Bio
-  - Info (Awards / Publications / Education)
-  - Dynamic Work Experience Resume
-  - Language experience (click to create hello world program with cool effects to appear)
-  - View real Resume
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
