@@ -1,17 +1,19 @@
 <template>
   <div class="canyon-bg">
     <div style="top:36%; position: relative;">
-      <h1>Welcome to my website</h1>
-      <h2>This is a subtitle</h2>
+      <h1>Jonathan Simmons</h1>
+      <h2>Live Portfolio</h2>
     </div>
   </div>
 </template>
 
 <style scoped>
-h1, h2 {
+h1,
+h2 {
   margin: auto;
   color: var(--js-white);
   text-align: center;
+  text-shadow: 5px 5px 4px black;
   animation: on-awake 0.4s ease-out;
 }
 
@@ -27,11 +29,16 @@ h1, h2 {
   margin-top: 79px;
   width: 100%;
   height: 36rem;
-
 }
 
 @keyframes on-awake {
-  0% { opacity: 0; transform: scale(0.95) translateY(100px); }
-  100% { opacity: 1; transform: scale(1) translateY(0); }
+  0% {
+    opacity: 0;
+    transform: scale(0.95) translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
 }
 </style>

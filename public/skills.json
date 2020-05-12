@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Vue.js",
+    "level": 1,
+    "description": "Vue is the primary web development framework I have used over the course of the years. I have used vue for 2 years with my internship and full time work with aWhere inc, and I created this website exclusively in vue."
+  },
+  {
+    "name": "Ruby",
+    "level": 2,
+    "description": "Ruby is my favorite scripting language. I worked with it to automate tasks during my internship at CGI and the Fikes Companies. It isn't my primary scripting language, but I have the most fun with it."
+  },
+  {
+    "name": "SQL",
+    "level": 2,
+    "description": "Ruby is my favorite scripting language. I worked with it to automate tasks during my internship at CGI and the Fikes Companies. It isn't my primary scripting language, but I have the most fun with it."
+  },
+  {
+    "name": "JavaScript",
+    "level": 2,
+    "description": "Ruby is my favorite scripting language. I worked with it to automate tasks during my internship at CGI and the Fikes Companies. It isn't my primary scripting language, but I have the most fun with it."
+  },
+  {
+    "name": "Java",
+    "level": 2,
+    "description": "Ruby is my favorite scripting language. I worked with it to automate tasks during my internship at CGI and the Fikes Companies. It isn't my primary scripting language, but I have the most fun with it."
+  },
+  {
+    "name": "DotNet",
+    "level": 2,
+    "description": "Ruby is my favorite scripting language. I worked with it to automate tasks during my internship at CGI and the Fikes Companies. It isn't my primary scripting language, but I have the most fun with it."
+  },
+  {
+    "name": "Python",
+    "level": 2,
+    "description": "Ruby is my favorite scripting language. I worked with it to automate tasks during my internship at CGI and the Fikes Companies. It isn't my primary scripting language, but I have the most fun with it."
+  },
+  {
+    "name": "C++",
+    "level": 2,
+    "description": "Ruby is my favorite scripting language. I worked with it to automate tasks during my internship at CGI and the Fikes Companies. It isn't my primary scripting language, but I have the most fun with it."
+  }
+]
