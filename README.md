@@ -1,5 +1,7 @@
 # jsimmons
 
+This is the uncompiled code in Vue for my static github io website.
+
 ## Project setup
 ```
 npm install
