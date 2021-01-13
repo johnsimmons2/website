@@ -5,14 +5,14 @@
       <div v-if="!loaded">
         Hi there! I'm still fetching this data. Please wait while I load.
       </div>
-      <div v-else v-for="(skill, id) in skills" :key="id">
+      <div v-else v-for="(skill, id) in skills" :key="id" ref=skills>
         <div
-          class="skills-obj"
+          class="skills-obj" :tag="'skill-' + id"
           :style="{ 'background-image': 'url(' + getImgUrl(skill.name) + ')' }"
           @mousedown="setActive(id)"
           @mouseleave="setActive(-1)"
         >
-          <div class="skill-description" v-if="activeId === id" @mouseover.stop>
+          <div class="skill-description" :style="getLeft(id)" v-if="activeId === id" @mouseover.stop>
             {{ skill.description }}
           </div>
         </div>
@@ -35,6 +35,14 @@ export default {
         default: -1,
         type: Boolean,
       },
+      firstBoxClick: {
+        default: false,
+        type: Boolean,
+      },
+      windowWidth: {
+        default: 0,
+        type: Number,
+      }
     };
   },
   methods: {
@@ -54,11 +62,44 @@ export default {
       return '/assets/' + name.replace(/[\s\\.]/, '').toLowerCase() + '.png';
     },
     setActive(id) {
-      this.activeId = id;
+      if (this.activeId === id) {
+        this.activeId = -1;
+      } else {
+        this.activeId = id;
+        if (this.firstBoxClick === false && this.activeId !== -1) {
+          this.$root.$alertify.warning('Click again or move the cursor to close the box.');
+          this.firstBoxClick = true;
+        }
+      }
     },
+    getLeft(id) {
+      // Calculate CSS rem to px, plus an adjustment for the padding of the div.
+      let overlap = this.$refs.skills[id].getBoundingClientRect().left + 28 * parseFloat(getComputedStyle(document.documentElement).fontSize);
+      // Default to 10px left for aesthetic.
+      let adjustment = 10;
+      if (overlap >= this.windowWidth) {
+        // Get the inverse of the overlap difference
+        adjustment = (overlap - this.windowWidth) * -1;
+      }
+      let result = "left: " + adjustment + "px;";
+      return result;
+    },
+    onResize() {
+      this.windowWidth = window.innerWidth;
+    }
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.onResize);
   },
   mounted: function() {
+    this.activeId = -1;
+    this.firstBoxClick = false;
+    this.windowWidth = window.innerWidth;
+    this.loaded = false;
     this.getSkills();
+    this.$nextTick(() => {
+      window.addEventListener('resize', this.onResize);
+    })
   },
 };
 </script>
@@ -68,31 +109,28 @@ export default {
   background-color: var(--js-primary-soft);
   color: var(--js-white);
   font-weight: 500;
-  border-radius: 4px;
+  border-radius: 0px 5px 5px 5px;
   position: absolute;
-  height: 10rem;
+  height: auto;
   width: 20rem;
   box-shadow: 5px 7px 7px rgba(0, 0, 0, 0.6);
   padding: 12px;
+  margin-right: auto;
 }
 
 .main-container {
   display: grid;
   grid-template-columns: 2fr 5fr 1fr;
   justify-items: center;
+  background-color: var(--js-primary-soft);
 }
 
 .skill-header {
-  height: 36%;
   text-align: center;
-  background-color: var(--js-primary-soft);
   grid-row: span 1;
   color: var(--js-white);
-  box-shadow: 5px 7px 7px rgba(0, 0, 0, 0.6);
-  padding: 16px 8px;
-  word-break: break-word;
-  border-radius: 4px;
-  margin-left: 50px;
+
+  margin: auto;
 }
 
 .skills-container {

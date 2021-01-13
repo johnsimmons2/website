@@ -12,31 +12,31 @@
   {
     "name": "SQL",
     "level": 2,
-    "description": "Ruby is my favorite scripting language. I worked with it to automate tasks during my internship at CGI and the Fikes Companies. It isn't my primary scripting language, but I have the most fun with it."
+    "description": "I have worked with both Microsoft SQL Server and Postgres SQL databases, both professionally and academically, for over 3 years."
   },
   {
     "name": "JavaScript",
     "level": 2,
-    "description": "Ruby is my favorite scripting language. I worked with it to automate tasks during my internship at CGI and the Fikes Companies. It isn't my primary scripting language, but I have the most fun with it."
+    "description": "As a full-stack engineer, I have developed and maintained many systems in javascript professionally, I have also re-made an entire API Developer portal site through Vue.js and raw JavaScript."
   },
   {
     "name": "Java",
     "level": 2,
-    "description": "Ruby is my favorite scripting language. I worked with it to automate tasks during my internship at CGI and the Fikes Companies. It isn't my primary scripting language, but I have the most fun with it."
+    "description": "Java is the first programming language I learned, as such I have been using it to many capacities including professionally since 2014."
   },
   {
     "name": "DotNet",
     "level": 2,
-    "description": "Ruby is my favorite scripting language. I worked with it to automate tasks during my internship at CGI and the Fikes Companies. It isn't my primary scripting language, but I have the most fun with it."
+    "description": "I have been using ASP.NET as well as many affiliated libraries for full-stack Web / REST API development as a software engineer for over a year and a half."
   },
   {
     "name": "Python",
     "level": 2,
-    "description": "Ruby is my favorite scripting language. I worked with it to automate tasks during my internship at CGI and the Fikes Companies. It isn't my primary scripting language, but I have the most fun with it."
+    "description": "Python was a primary language of use during my undergraduate study at UMHB. Similarly, on a research trip to Brno, Czech Republic, our research group used Python during our work at Red Hat for static code analysis."
   },
   {
     "name": "C++",
     "level": 2,
-    "description": "Ruby is my favorite scripting language. I worked with it to automate tasks during my internship at CGI and the Fikes Companies. It isn't my primary scripting language, but I have the most fun with it."
+    "description": "C++ was the language used to learn data structures and algorithms during my undergraduate study. I have used this for several projects during those years in undergraduate study."
   }
 ]

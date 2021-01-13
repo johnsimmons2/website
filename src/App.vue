@@ -21,8 +21,8 @@
     </div>
 
     <div class="contact-me">
-      Follow the links in the header to my email, linkedin, and github. My cell
-      and professional or character references are available on request.
+      Follow the links in the header to my email, linkedin, and github. My cell phone number
+      and professional references are available on request.
       <div class="contact-box">
         <div>
           <a href="mailto:jsim247@gmail.com">Gmail</a>
@@ -35,6 +35,7 @@
         </div>
       </div>
     </div>
+    <hr/>
   </div>
 </template>
 
@@ -45,8 +46,10 @@ import Bio from './components/Bio.vue';
 import Skills from './components/Skills.vue';
 import Vue from 'vue';
 import VueResource from 'vue-resource';
+import VueAlertify from 'vue-alertify';
 
 Vue.use(VueResource);
+Vue.use(VueAlertify);
 
 export default {
   name: 'App',
@@ -60,6 +63,11 @@ export default {
 </script>
 
 <style scoped>
+hr {
+    color: var(--js-primary);
+    background-color: var(--js-primary);
+}
+
 .contact-box {
   display: flex;
   justify-content: space-around;
@@ -67,12 +75,12 @@ export default {
 }
 
 a {
-  color: black;
+  color: darkblue;
 }
 
 .contact-me {
   border-radius: 4px;
-  background-color: var(--js-primary-soft);
+  background-color: var(--js-primary);
   box-shadow: 5px 7px 7px rgba(0, 0, 0, 0.6);
   color: var(--js-white);
   width: 60%;
